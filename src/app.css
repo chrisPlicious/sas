@@ -264,6 +264,11 @@ textarea {
 	height: 100%;
 }
 
+/* Equipment shots keep their colour: renters need to see the actual machine */
+.photo.photo-color {
+	filter: none;
+}
+
 /* ── Buttons ────────────────────────────────────────────────── */
 
 .btn {
@@ -469,10 +474,16 @@ textarea {
 		mask-position 1100ms var(--ease-out) var(--d);
 }
 
-/* Hold page entrance animations while the entry loader covers the page;
-   they start the moment it lifts. */
-html.sas-intro main * {
+/* Hold page entrance animations while the entry loader or the page
+   transition's paper covers the page; they start the moment it lifts. */
+html.sas-intro main *,
+html.pt-cover main * {
 	animation-play-state: paused !important;
+}
+
+/* The route swaps under the transition's paper: the scroll reset must jump. */
+html.pt-run {
+	scroll-behavior: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

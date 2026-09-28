@@ -38,7 +38,7 @@
 	id="rentals-title"
 	title="Affordable construction equipment for rent in Cebu."
 	lead="Machinery and tools for contractors, subcontractors and private homebuilders, from the same crew that builds with them every day."
-	photo={photos.cutterAtWork}
+	photo={photos.mixerYard}
 	photoNote="Sample photo"
 >
 	{#snippet meta()}

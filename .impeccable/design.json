@@ -49,7 +49,7 @@
       { "name": "menu-wipe", "value": "420ms clip-path from the right edge", "purpose": "Mobile menu dialog entrance." },
       { "name": "accordion-open", "value": "500ms clip-path inset top-down + fade", "purpose": "Process step panels." },
       { "name": "photo-zoom", "value": "900ms scale 1.03-1.04", "purpose": "Card photos on hover; project photos also ease to grayscale(0.15)." },
-      { "name": "page-transition", "value": "View Transitions API default cross-fade", "purpose": "Route changes; skipped under prefers-reduced-motion." },
+      { "name": "page-transition", "value": "SAS arrow sweep: peek, dip, sweep up dragging a paper page; route swaps under the paper, which fades off as the new page rises 30px (1.45s)", "purpose": "Route changes; skipped under prefers-reduced-motion and while the entry loader is up." },
       { "name": "reduced-motion", "value": "0.01ms", "purpose": "All animations and transitions collapse; smooth scroll off." }
     ],
     "breakpoints": [
@@ -66,7 +66,7 @@
         { "name": "cut-lg", "value": "22px", "purpose": "Large plates and rate notes; single corner on the job-order slip and process thumbnails." }
       ],
       "blueprintGrid": { "value": "18px square grid of 1px lines", "purpose": "Texture on dark plates (line-dark) and orange glyph plates (ink at 9-10%)." },
-      "photoTreatment": { "value": "grayscale(1) contrast(1.06) brightness(1.02); object-fit: cover", "purpose": "Every photograph, on a concrete ground while loading." }
+      "photoTreatment": { "value": "grayscale(1) contrast(1.06) brightness(1.02); object-fit: cover", "purpose": "Every photograph, on a concrete ground while loading. Exception: rental equipment photos set color: true (.photo-color, filter none) and show the machine alone in colour." }
     }
   },
   "components": [
@@ -156,7 +156,7 @@
     "keyCharacteristics": [
       "Concrete paper ground, charcoal ink bands, safety orange used as whole panels.",
       "Chamfered plates plus a single 31° roof-pitch cut per large panel or photo.",
-      "Grayscale photography throughout. SAS orange is the only saturated colour on the page.",
+      "Grayscale photography throughout, except rental equipment, shown alone and in colour. SAS orange is the only other saturated colour on the page.",
       "Chakra Petch uppercase for signage. Azeret Mono only for data.",
       "Flat: no radius, no shadows. Depth comes from tone steps, overlap and the cut.",
       "Honest placeholders: Sample tags on stock photos and unconfirmed listings."
@@ -173,7 +173,7 @@
       { "name": "The Cut-Not-Curved Rule", "body": "Corners are chamfered or square. A curve belongs only inside a drawn glyph or the logo's chevron feet, never on a box.", "section": "shapes" },
       { "name": "The Roof-Pitch Rule", "body": "Any diagonal larger than a chamfer is cut at the SAS pitch: 0.6 against the horizontal for roof lines, or against the vertical for raking edges. No other angle is used.", "section": "shapes" },
       { "name": "The Visible Sample Rule", "body": "Stock photography and unconfirmed entries (projects, equipment) carry an ink Sample tag with orange text, driven by the content's `sample` flag. The tag stays until real SAS content replaces the entry. It is never hidden to make a layout look finished.", "section": "components" },
-      { "name": "The Grayscale Site Rule", "body": "Every photograph gets the same grayscale treatment, so SAS orange is the only saturated colour on the page.", "section": "components" },
+      { "name": "The Grayscale Site Rule", "body": "Every photograph gets the same grayscale treatment, so SAS orange is the only saturated colour on the page. The one exception is rental equipment, shown alone and in colour so renters see the actual machine.", "section": "components" },
       { "name": "The Cut Reveal Rule", "body": "Things enter by being uncovered along a cut: a clip-path reveal with a short travel of 0.35em or less. They never fly in from a distance or bounce.", "section": "components" }
     ],
     "dos": [
@@ -181,7 +181,7 @@
       "Do chamfer plates at 14px, large plates at 22px, and buttons at small two-corner cuts; keep every box's radius at 0.",
       "Do use orange as a whole field (panel, plate, button, tile block) with ink (7.0:1) or rust (4.8:1) text on it.",
       "Do make only the first plate orange in a sequence of plates; the rest are ink or worn paper.",
-      "Do run every photo through the shared grayscale treatment.",
+      "Do run every photo through the shared grayscale treatment, except equipment shots (color: true), which show the machine alone and in colour.",
       "Do set signage in uppercase Chakra Petch and data (addresses, hours, specs, counters, job numbers, tags) in Azeret Mono.",
       "Do join plates and cards at 8px seams, and split desktop columns on a 1px hairline spine.",
       "Do end every page at a phone number: the closing band, footer and menu carry call actions at full button height (3rem or more), and a compact header call joins them from 40rem up.",

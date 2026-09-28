@@ -231,7 +231,7 @@ The world comes from the client-pinned GravisPoint concept boards, recoloured fr
 **Key Characteristics:**
 - Concrete paper ground, charcoal ink bands, safety orange used as whole panels.
 - Chamfered plates plus a single 31° roof-pitch cut per large panel or photo.
-- Grayscale photography throughout. SAS orange is the only saturated colour on the page.
+- Grayscale photography throughout, except rental equipment, which is shown alone and in colour. SAS orange is the only other saturated colour on the page.
 - Chakra Petch uppercase for signage. Azeret Mono only for data.
 - Flat: no radius, no shadows. Depth comes from tone steps, overlap and the cut.
 - Honest placeholders: Sample tags on stock photos and unconfirmed listings.
@@ -374,7 +374,7 @@ Buttons are plates that label an action: tactile and blunt.
 - **Plates:** the base container, a chamfered block on a tone (dark, orange, worn paper or concrete) with generous padding (about 1.1–2.25rem). No border, no shadow.
 - **Service plate:** a tall plate-charcoal block with the 18px blueprint grid. It has an uppercase title top-left and a centred service glyph that lifts 6px on hover. A separate caption plate hangs below it at a small seam, in mono steel-on-dark. The first plate of the set is orange, with an ink-tinted grid and rust caption.
 - **Project card:** an ink card with a 4:3 grayscale photo. Tags sit top-left, a paper title plate with a slanted right edge sits bottom-left (uppercase title plus mono location in steel), and a 2.5rem orange square "+" action sits bottom-right. On hover the photo regains a trace of colour (grayscale 0.15) and zooms 3% over 900ms. The "+" action turns paper on hover.
-- **Equipment card:** plate charcoal with two opposite chamfers, a 4:3 grayscale photo with tags, an uppercase name, a mono spec list on dark hairlines, and a small orange "Ask availability" button. On hover the photo zooms 4%.
+- **Equipment card:** plate charcoal with two opposite chamfers, a 4:3 colour photo of the machine alone with tags (and a licence credit bottom-right when the source needs one), an uppercase name, a mono spec list on dark hairlines, and a small orange "Ask availability" button. On hover the photo zooms 4%.
 - **Spec list:** mono `dl` rows between hairlines. The label (`dt`) is in secondary steel and the value is right-aligned. Rates always read "Quoted per job".
 
 ### Inputs / Fields
@@ -406,6 +406,7 @@ The closing band is a grayscale site photo under an ink scrim, with a hairline a
 
 ### Photographs
 - **Treatment:** every photo renders `grayscale(1) contrast(1.06) brightness(1.02)` with `object-fit: cover`, on a concrete ground while loading. Colour photos supplied by the client drop in and receive the same treatment.
+- **Equipment exception:** rental equipment photos (the Rentals hero and every equipment card) show the machine on its own, in full colour, because renters need to see the actual unit. They set `color: true` in `photos.ts`, which adds `.photo-color`. Stand-ins come from Unsplash, Pexels and Wikimedia Commons. Commons files carry a small mono credit ("Photo: author · licence") at the bottom-right of the card, linked to the file page, as their licences require.
 - **Framing:** 4:3 in cards and thumbnails. Bands and heroes fill their area and take the pitched cut.
 - **Motion on hover:** a slow zoom (3–4% over 900ms). On project cards the photo regains a trace of colour.
 
@@ -414,13 +415,13 @@ The closing band is a grayscale site photo under an ink scrim, with a hairline a
 - **State changes:** 160–240ms background and colour swaps. Arrow nudge 4px, glyph lift 6px, footer link slide 0.5rem.
 - **Entrances reveal by a cut:** headline lines rise 0.3–0.35em through a clip reveal (900ms, 70ms stagger). The orange Rent panel wipes open from its bottom-right corner into its own pitched polygon (1100ms). The menu wipes in from the right (420ms). Accordion panels open top-down (500ms).
 - **Section reveals:** every section's content eases in once, the first time it scrolls into view, and never replays when scrolled back to. After it settles (about 1.7s), `data-reveal` is removed so no mask or transform lingers. There are two variants. `data-reveal` blocks such as headings, copy and lists rise 0.75rem while a mask uncovers them top-down (1000ms). `data-reveal="wipe"` plates, cards and photos are uncovered by a mask cut at the 31° roof pitch, sweeping from the bottom-right corner (1100ms), which echoes the Rent panel. Entrances use `--ease-out`. Stagger is `--i` × 90ms, capped at 5 steps. Reveals use masks, never clip-path, because IntersectionObserver reads a target through its own clip-path. They are enabled only by `html.reveal-ready` (set before first paint), wait for the entry loader, and have a failsafe that un-hides content if the app script never runs. Heroes are never reveal targets; they own their entrances. Engine: `src/lib/motion/reveal.ts`.
-- **Page changes:** the View Transitions API cross-fades between routes when available.
-- **Reduced motion:** all animations and transitions collapse to near zero, smooth scrolling turns off, view transitions are skipped, and section reveals and the entry loader never engage.
+- **Page changes:** the SAS arrow carries every route change (ported from the Claude Design "Arrow Transition"). The tip peeks up from the bottom edge, dips, then sweeps up the screen with a slight stretch, dragging a paper page behind it while the outgoing page lifts away. The route swaps while the paper covers the viewport, then the paper fades off as the new page rises 30px into place (1.45s in total). New-page entrances and section reveals wait under the paper (`html.pt-cover`), and the scroll reset jumps instead of smooth-scrolling (`html.pt-run`). The overlay is a manual popover so it also covers the open menu dialog. Same-path changes (query, hash) don't trigger it, and it stands down while the entry loader is up. Engine: `src/lib/components/PageTransition.svelte`.
+- **Reduced motion:** all animations and transitions collapse to near zero, smooth scrolling turns off, the page transition is skipped, and section reveals and the entry loader never engage.
 
 ### Named Rules
 **The Visible Sample Rule.** Stock photography and unconfirmed entries (projects, equipment) carry an ink Sample tag with orange text, driven by the content's `sample` flag. The tag stays until real SAS content replaces the entry. It is never hidden to make a layout look finished.
 
-**The Grayscale Site Rule.** Every photograph gets the same grayscale treatment, so SAS orange is the only saturated colour on the page.
+**The Grayscale Site Rule.** Every photograph gets the same grayscale treatment, so SAS orange is the only saturated colour on the page. The one exception is rental equipment, shown alone and in colour so renters see the actual machine.
 
 **The Cut Reveal Rule.** Things enter by being uncovered along a cut: a clip or mask reveal with a short travel of 0.35em (lines) or 0.75rem (blocks) at most. Plates are cut open at the roof pitch. Nothing flies in from a distance or bounces.
 
@@ -431,7 +432,7 @@ The closing band is a grayscale site photo under an ink scrim, with a hairline a
 - **Do** chamfer plates at 14px, large plates at 22px, and buttons at small two-corner cuts; keep every box's radius at 0.
 - **Do** use orange as a whole field (panel, plate, button, tile block) with ink (7.0:1) or rust (4.8:1) text on it.
 - **Do** make only the first plate orange in a sequence of plates; the rest are ink or worn paper.
-- **Do** run every photo through the shared grayscale treatment.
+- **Do** run every photo through the shared grayscale treatment, except equipment shots (`color: true`), which show the machine alone and in colour.
 - **Do** set signage in uppercase Chakra Petch and data (addresses, hours, specs, counters, job numbers, tags) in Azeret Mono.
 - **Do** join plates and cards at 8px seams, and split desktop columns on a 1px hairline spine.
 - **Do** end every page at a phone number: the closing band, footer and menu carry call actions at full button height (3rem or more), and a compact header call joins them from 40rem up.

@@ -24,7 +24,8 @@
 	id="projects-title"
 	title="Projects around Cebu."
 	lead="Two-storey homes, renovations and commercial fit-outs, followed from ocular inspection to handover with progress videos along the way."
-	photo={photos.frameTall}
+	photo={photos.houseTropical}
+	photoNote="Sample photo"
 >
 	{#snippet meta()}
 		<span>Residential · Commercial</span>

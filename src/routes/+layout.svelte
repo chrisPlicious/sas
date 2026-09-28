@@ -6,28 +6,15 @@
 	import '@fontsource-variable/azeret-mono/wght.css';
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import { onNavigate } from '$app/navigation';
 	import { startReveals } from '$lib/motion/reveal';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import EntryLoader from '$lib/components/EntryLoader.svelte';
+	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	let { children } = $props();
 
 	onMount(startReveals);
-
-	onNavigate((navigation) => {
-		if (!document.startViewTransition) return;
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-		return new Promise((resolve) => {
-			document.startViewTransition(async () => {
-				resolve();
-				await navigation.complete;
-			});
-		});
-	});
-
 </script>
 
 <svelte:head>
@@ -36,6 +23,7 @@
 </svelte:head>
 
 <EntryLoader />
+<PageTransition />
 
 <a class="skip" href="#main">Skip to content</a>
 

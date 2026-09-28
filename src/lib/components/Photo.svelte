@@ -12,6 +12,7 @@
 
 <img
 	class="photo {className}"
+	class:photo-color={photo.color}
 	src={src(photo, 1200)}
 	srcset={srcset(photo)}
 	{sizes}

@@ -14,12 +14,13 @@ export type Project = {
 
 // Only the Pardo project is a known SAS job (progress video on their Facebook page).
 // Everything else is a sample until SAS supplies real projects and photos.
+// Cards show finished work (handover shots), never sites under construction.
 export const projects: Project[] = [
 	{
 		title: 'Two-storey residence',
 		location: 'Pardo, Cebu City',
 		category: 'Residential',
-		photo: photos.frameClose,
+		photo: photos.houseTwoStorey,
 		sample: true,
 		note: 'Real SAS project · photo is a stand-in'
 	},
@@ -27,49 +28,49 @@ export const projects: Project[] = [
 		title: 'Multi-storey house',
 		location: 'Location to follow',
 		category: 'Residential',
-		photo: photos.scaffoldBlock,
+		photo: photos.houseMultiStorey,
 		sample: true
 	},
 	{
 		title: 'Commercial space build-out',
 		location: 'Location to follow',
 		category: 'Commercial',
-		photo: photos.slabWork,
+		photo: photos.shopInterior,
 		sample: true
 	},
 	{
 		title: 'Home extension',
 		location: 'Location to follow',
 		category: 'Renovation',
-		photo: photos.houseFrame,
+		photo: photos.homeExtension,
 		sample: true
 	},
 	{
 		title: 'Kitchen & bath fit-out',
 		location: 'Location to follow',
 		category: 'Finishing',
-		photo: photos.interiorShell,
+		photo: photos.kitchenFitOut,
 		sample: true
 	},
 	{
 		title: 'Townhouse row',
 		location: 'Location to follow',
 		category: 'Residential',
-		photo: photos.frameTall,
+		photo: photos.townhouseRow,
 		sample: true
 	},
 	{
-		title: 'Structural frame & slab',
+		title: 'Low-rise commercial building',
 		location: 'Location to follow',
 		category: 'Commercial',
-		photo: photos.craneFrame,
+		photo: photos.commercialBlock,
 		sample: true
 	},
 	{
 		title: 'Layout reconfiguration',
 		location: 'Location to follow',
 		category: 'Renovation',
-		photo: photos.interiorFraming,
+		photo: photos.openPlanLiving,
 		sample: true
 	}
 ];

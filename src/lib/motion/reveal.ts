@@ -26,9 +26,10 @@ export function startReveals(): () => void {
 	if (!root.classList.contains('reveal-ready')) return () => {};
 	(window as Window & { __sasReveal?: boolean }).__sasReveal = true;
 
-	// Hold reveals while the entry loader covers the page.
+	// Hold reveals while the entry loader or the page transition covers the page.
 	const pending = new Set<Element>();
-	const introUp = () => root.classList.contains('sas-intro');
+	const covered = () =>
+		root.classList.contains('sas-intro') || root.classList.contains('pt-cover');
 
 	const io = new IntersectionObserver(
 		(entries) => {
@@ -36,7 +37,7 @@ export function startReveals(): () => void {
 				if (!entry.isIntersecting || entry.intersectionRatio < IN_RATIO) continue;
 				const el = entry.target;
 				io.unobserve(el);
-				if (introUp()) pending.add(el);
+				if (covered()) pending.add(el);
 				else play(el);
 			}
 		},
@@ -71,9 +72,9 @@ export function startReveals(): () => void {
 	});
 	dom.observe(document.body, { childList: true, subtree: true });
 
-	// Release held reveals the moment the loader lifts.
+	// Release held reveals the moment the cover lifts.
 	const intro = new MutationObserver(() => {
-		if (introUp()) return;
+		if (covered()) return;
 		pending.forEach(play);
 		pending.clear();
 	});

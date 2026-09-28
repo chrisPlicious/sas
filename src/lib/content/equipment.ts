@@ -14,8 +14,9 @@ export type Equipment = {
 };
 
 // SAS rental inventory (confirmed by the client, Sept 2026).
-// Photos are stock stand-ins: drop SAS's own photos in /static/equipment/,
-// point `photo` at them and set `stockPhoto: false`.
+// Photos are stock stand-ins showing each machine on its own, in colour: drop
+// SAS's own photos in /static/equipment/, point `photo` at them and set
+// `stockPhoto: false`.
 const RATE = 'Rate quoted per job';
 
 export const equipment: Equipment[] = [
@@ -87,7 +88,7 @@ export const equipment: Equipment[] = [
 		name: 'Concrete vibrator',
 		category: 'Tools',
 		specs: ['Settles fresh concrete and drives out air pockets', RATE],
-		photo: photos.concretePour,
+		photo: photos.concreteVibrator,
 		sample: false,
 		stockPhoto: true
 	}
