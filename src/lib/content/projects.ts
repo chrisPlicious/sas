@@ -1,6 +1,6 @@
 import { photos, type Photo } from './photos';
 
-export type ProjectCategory = 'Residential' | 'Commercial' | 'Renovation' | 'Finishing';
+export type ProjectCategory = 'Residential' | 'Commercial' | 'Renovation';
 
 export type Project = {
 	title: string;
@@ -46,9 +46,9 @@ export const projects: Project[] = [
 		sample: true
 	},
 	{
-		title: 'Kitchen & bath fit-out',
+		title: 'Kitchen & bath renovation',
 		location: 'Location to follow',
-		category: 'Finishing',
+		category: 'Renovation',
 		photo: photos.kitchenFitOut,
 		sample: true
 	},
@@ -75,4 +75,4 @@ export const projects: Project[] = [
 	}
 ];
 
-export const projectCategories: ProjectCategory[] = ['Residential', 'Commercial', 'Renovation', 'Finishing'];
+export const projectCategories: ProjectCategory[] = ['Residential', 'Commercial', 'Renovation'];

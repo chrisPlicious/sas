@@ -21,13 +21,13 @@ export type Inquiry = {
 
 export const locations = ['Cebu City', 'Mandaue City', 'Talisay City', 'Other town in Cebu'] as const;
 
+// Mirrors the confirmed service list in content/services.ts.
 export const projectTypes = [
 	'New house',
 	'Multi-storey house or townhouse',
-	'Commercial space',
-	'Renovation or extension',
-	'Plans & permits',
-	'Finishing trades'
+	'Commercial building',
+	'House improvement or renovation',
+	'Plans & permits'
 ] as const;
 
 export const stages = ['Just an idea', 'I have a lot', 'I have plans'] as const;

@@ -27,7 +27,7 @@
 
 <Seo
 	title=""
-	description="SAS Construction builds homes and light commercial spaces in Cebu, from plans, sign & seal and permits to finishing trades, and rents construction equipment across Cebu."
+	description="SAS Construction builds, improves and renovates homes and light commercial buildings in Cebu, with complete building plans, sign & seal and permit assistance, and rents construction equipment across Cebu."
 />
 
 <!-- ── Hero: two doors ─────────────────────────────── -->
@@ -57,8 +57,8 @@
 			</a>
 		</div>
 		<p class="hero-sub">
-			Houses, townhouses, renovations and light commercial work in Cebu: plans, sign & seal, permits, the
-			build, and the finishing trades, all from one family-run contractor.
+			Houses, townhouses, renovations and light commercial work in Cebu: plans, sign & seal, permits and
+			the build, all from one family-run contractor.
 		</p>
 	</div>
 
@@ -117,9 +117,9 @@
 <section class="services" aria-labelledby="services-title">
 	<div class="frame services-grid">
 		<div class="services-intro" data-reveal>
-			<h2 id="services-title" class="display h2">From empty lot to finished room.</h2>
+			<h2 id="services-title" class="display h2">From empty lot to finished house.</h2>
 			<p class="lead muted">
-				One contractor for the drawings, the permits, the concrete, the trades, and the machines on site.
+				One contractor for the drawings, the permits, the build, the renovation, and the machines on site.
 			</p>
 			<a class="btn btn-ink" href="/services">
 				<span>All services</span>
@@ -135,7 +135,15 @@
 							<h3 class="plate-title">{service.title}</h3>
 							<ServiceGlyph name={service.icon} class="plate-glyph" />
 						</div>
-						<p class="plate-cap chamfer" class:is-orange={i === 0}>{service.short}</p>
+						{#if service.slug === 'rentals'}
+							<p class="plate-cap chamfer" class:is-orange={i === 0}>{service.short}</p>
+						{:else}
+							<ul class="plate-cap plate-list chamfer" class:is-orange={i === 0} role="list">
+								{#each service.items as item (item.name)}
+									<li>{item.name}</li>
+								{/each}
+							</ul>
+						{/if}
 					</a>
 				</li>
 			{/each}
@@ -592,6 +600,7 @@
 
 	.plate-link {
 		display: grid;
+		grid-template-rows: auto 1fr;
 		gap: 0.35rem;
 		text-decoration: none;
 		height: 100%;
@@ -663,6 +672,34 @@
 	.plate-cap.is-orange {
 		background: var(--orange);
 		color: var(--on-orange-2);
+	}
+
+	/* Every service by name, each on its own roof marker */
+	.plate-list {
+		display: grid;
+		align-content: start;
+		gap: 0.35rem;
+		margin: 0;
+	}
+
+	.plate-list li {
+		position: relative;
+		padding-left: 1.1rem;
+	}
+
+	.plate-list li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.5em;
+		width: 0.6rem;
+		height: 0.36rem;
+		background: var(--orange);
+		clip-path: polygon(50% 0, 100% 60%, 100% 100%, 50% 40%, 0 100%, 0 60%);
+	}
+
+	.plate-list.is-orange li::before {
+		background: var(--ink);
 	}
 
 	@media (min-width: 40rem) {

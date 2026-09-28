@@ -34,9 +34,7 @@ A local, family-run Cebu contractor (SAS = the Sasing family name) that covers t
 
 ## Capabilities and Constraints
 
-- **Construction:** residential (single-family, multi-storey, townhouses), light commercial and build-outs, renovations/extensions/alterations, structural works (foundations, RC framing, structural steel).
-- **Plans & permits:** architectural design (plans, elevations, sections, 2D/3D), sign & seal of architectural/structural/electrical/sanitary-plumbing plans by PRC-licensed professionals, permit assistance (building, occupancy, fencing, demolition).
-- **Finishing trades:** tiling, ceiling & partitions, painting, electrical, plumbing, waterproofing, modular cabinetry & countertops, landscaping.
+- **Service list (confirmed by the user, 2026-09-28; the site shows exactly these):** General Construction · Residential Buildings · Commercial Buildings · House Improvement · House Renovation · Complete Set of Building Plans · Sign & Seal of Plans · Building Permit Assistance · Occupancy Permit Assistance · Fencing Permit Assistance · Demolition Permit Assistance. Grouped on the site as Construction, Plans & permits, and Renovation (house improvement + house renovation). Finishing trades, structural works and 2D/3D visualisation (from the earlier business profile) are not on the list and are no longer advertised.
 - **Equipment rental (confirmed by the user, 2026-09-28):** one-bagger concrete mixer, plate compactor, concrete cutter, generator, water pump, jackhammer, chipping gun, concrete vibrator. Model specs and rates are not published; do not invent them. Photos are stock stand-ins tagged "Sample photo" until SAS supplies its own.
 - **Pages:** Home, Services, Projects, Equipment Rentals, Contact/Inquiry.
 - **Contact channels pushed:** Call/SMS (+63 915 448 3783, 0927 224 9302) and the inquiry form. Email alvinsasing97@gmail.com may appear as secondary info.

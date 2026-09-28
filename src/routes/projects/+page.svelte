@@ -23,13 +23,13 @@
 <PageHero
 	id="projects-title"
 	title="Projects around Cebu."
-	lead="Two-storey homes, renovations and commercial fit-outs, followed from ocular inspection to handover with progress videos along the way."
+	lead="Two-storey homes, renovations and commercial buildings, followed from ocular inspection to handover with progress videos along the way."
 	photo={photos.houseTropical}
 	photoNote="Sample photo"
 >
 	{#snippet meta()}
 		<span>Residential · Commercial</span>
-		<span>Renovation · Finishing</span>
+		<span>Improvement · Renovation</span>
 	{/snippet}
 	{#snippet actions()}
 		<a class="btn" href="/contact?type=build">

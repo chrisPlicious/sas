@@ -107,7 +107,7 @@
 					<label class="kind-opt" class:on={q.type === 'build'}>
 						<input type="radio" name="type" value="build" bind:group={q.type} />
 						<span class="kind-name">Build or renovate</span>
-						<span class="kind-sub">Houses, commercial, plans & permits, finishing</span>
+						<span class="kind-sub">Houses, commercial, renovation, plans & permits</span>
 					</label>
 					<label class="kind-opt" class:on={q.type === 'rent'}>
 						<input type="radio" name="type" value="rent" bind:group={q.type} />

@@ -3,7 +3,7 @@ import { photos, type Photo } from './photos';
 export type ServiceItem = { name: string; detail: string };
 
 export type ServiceGroup = {
-	slug: 'construction' | 'plans-permits' | 'finishing' | 'rentals';
+	slug: 'construction' | 'plans-permits' | 'renovation' | 'rentals';
 	title: string;
 	short: string;
 	summary: string;
@@ -13,78 +13,89 @@ export type ServiceGroup = {
 	items: ServiceItem[];
 };
 
+// SAS's service list (confirmed by the user, 2026-09-28): general construction,
+// residential and commercial buildings, house improvement and renovation, a
+// complete set of building plans, sign & seal, and building, occupancy, fencing
+// and demolition permit assistance. Plus equipment rental. Don't add services
+// that aren't on it.
 export const services: ServiceGroup[] = [
 	{
 		slug: 'construction',
 		title: 'Construction',
-		short: 'Houses, townhouses, light commercial, renovations',
+		short: 'General construction, residential and commercial buildings',
 		summary:
-			'Design and construction of single-family homes, multi-storey houses and townhouses, light commercial buildings, and the renovations that keep them working.',
+			'General construction of residential and commercial buildings: single-family homes, multi-storey houses, townhouses and light commercial spaces.',
 		icon: 'frame',
 		photo: photos.frameGrid,
 		href: '/services#construction',
 		items: [
 			{
+				name: 'General construction',
+				detail: 'The build itself, from the foundations and concrete frame to the roof, run by one contractor.'
+			},
+			{
 				name: 'Residential buildings',
-				detail: 'Complete design and construction of single-family residences, multi-storey houses and townhouses.'
+				detail: 'Single-family residences, multi-storey houses and townhouses, from plans to handover.'
 			},
 			{
 				name: 'Commercial buildings',
-				detail: 'Light commercial structures and commercial space build-outs.'
+				detail: 'Light commercial structures and commercial spaces.'
+			}
+		]
+	},
+	{
+		slug: 'renovation',
+		title: 'Renovation',
+		short: 'House improvement and house renovation',
+		summary: 'Work on the house you already have: improvements that add to it, and renovations that rework it.',
+		icon: 'tile',
+		photo: photos.interiorShell,
+		href: '/services#renovation',
+		items: [
+			{
+				name: 'House improvement',
+				detail: 'Extensions, added rooms, repairs and upgrades to a house you already live in.'
 			},
 			{
-				name: 'Improvements & renovations',
-				detail: 'Home extensions, structural alterations, repairs and layout reconfigurations.'
-			},
-			{
-				name: 'Structural works',
-				detail: 'Foundation laying, reinforced concrete framing and structural steel works.'
+				name: 'House renovation',
+				detail: 'Reworking an existing house: alterations, layout changes and refreshed interiors and exteriors.'
 			}
 		]
 	},
 	{
 		slug: 'plans-permits',
 		title: 'Plans & permits',
-		short: 'Design, sign & seal, permit processing',
+		short: 'Building plans, sign & seal, permit assistance',
 		summary:
-			'Architectural plans drawn for your lot, signed and sealed by PRC-licensed professionals, and walked through the permit your project needs.',
+			'A complete set of building plans drawn for your lot, signed and sealed by PRC-licensed professionals, and walked through the permit your project needs.',
 		icon: 'plan',
 		photo: photos.plansSheet,
 		href: '/services#plans-permits',
 		items: [
 			{
-				name: 'Architectural design',
-				detail: 'Full floor plans, elevations, sections, and 2D/3D visualizations.'
+				name: 'Complete set of building plans',
+				detail: 'Architectural, structural, electrical and sanitary/plumbing plans, drawn for your lot.'
 			},
 			{
-				name: 'Sign & seal',
-				detail:
-					'Architectural, structural, electrical and sanitary/plumbing plans signed and sealed by PRC-licensed professionals.'
+				name: 'Sign & seal of plans',
+				detail: 'Every sheet signed and sealed by PRC-licensed professionals, ready for the permit office.'
 			},
 			{
-				name: 'Permit assistance',
-				detail: 'Building, occupancy, fencing and demolition permits, prepared and processed with you.'
+				name: 'Building permit assistance',
+				detail: 'Prepared and processed with you before the first excavation.'
+			},
+			{
+				name: 'Occupancy permit assistance',
+				detail: 'Prepared and processed with you before you move in.'
+			},
+			{
+				name: 'Fencing permit assistance',
+				detail: 'For perimeter walls and gates.'
+			},
+			{
+				name: 'Demolition permit assistance',
+				detail: 'For clearing an old structure off the lot.'
 			}
-		]
-	},
-	{
-		slug: 'finishing',
-		title: 'Finishing trades',
-		short: 'Tiles, ceilings, paint, electrical, plumbing',
-		summary:
-			'The trades that turn a concrete shell into a room you can live in, handled by the same contractor that built the frame.',
-		icon: 'tile',
-		photo: photos.interiorShell,
-		href: '/services#finishing',
-		items: [
-			{ name: 'Tiling', detail: 'Floor and wall tile for bathrooms, kitchens, living areas and exterior features.' },
-			{ name: 'Ceilings & partitions', detail: 'Gypsum board, acoustic boards, drop ceilings and interior drywalls.' },
-			{ name: 'Painting', detail: 'Interior and exterior paint, waterproofing coats and surface refinishing.' },
-			{ name: 'Electrical', detail: 'Roughing-in, wiring, panel boards and fixture installation.' },
-			{ name: 'Plumbing', detail: 'Rough-in piping, drainage, water supply lines and sanitary fixtures.' },
-			{ name: 'Waterproofing', detail: 'Moisture protection for roof decks, balconies and wet areas.' },
-			{ name: 'Cabinetry & countertops', detail: 'Custom kitchen cabinets, wardrobes and countertop installation.' },
-			{ name: 'Landscaping', detail: 'Outdoor ground finishing and exterior decorative works.' }
 		]
 	},
 	{

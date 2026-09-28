@@ -6,24 +6,25 @@
 	import ServiceGlyph from '$lib/components/ServiceGlyph.svelte';
 	import ProcessList from '$lib/components/ProcessList.svelte';
 	import { photos } from '$lib/content/photos';
-	import { services, permits } from '$lib/content/services';
+	import { services, type ServiceGroup } from '$lib/content/services';
 	import { site } from '$lib/content/site';
 
-	const construction = services[0];
-	const plans = services[1];
-	const finishing = services[2];
-	const rentals = services[3];
+	const group = (slug: ServiceGroup['slug']) => services.find((s) => s.slug === slug)!;
+	const construction = group('construction');
+	const renovation = group('renovation');
+	const plans = group('plans-permits');
+	const rentals = group('rentals');
 </script>
 
 <Seo
 	title="Services"
-	description="Residential and light commercial construction, renovations, structural works, architectural plans, PRC sign & seal, permit processing, finishing trades and equipment rental in Cebu."
+	description="General construction of residential and commercial buildings, house improvement and renovation, complete building plans, PRC sign & seal, permit assistance and equipment rental in Cebu."
 />
 
 <PageHero
 	id="services-title"
-	title="What we build, draw, finish and rent."
-	lead="From the first site visit to the last coat of paint, SAS carries the job, and rents out the machines that do the heavy work."
+	title="What we build, draw, permit and rent."
+	lead="From the first site visit to handover, SAS carries the plans, the permits and the build, and rents out the machines that do the heavy work."
 	photo={photos.rebarTops}
 >
 	{#snippet meta()}
@@ -72,8 +73,32 @@
 	</div>
 </section>
 
+<!-- Renovation -->
+<section id="renovation" class="split split-rev" aria-labelledby="renovation-title">
+	<div class="split-media" data-reveal="wipe">
+		<Photo photo={renovation.photo} sizes="(min-width: 64rem) 50vw, 100vw" />
+		<ServiceGlyph name="tile" class="split-glyph" />
+	</div>
+	<div class="split-copy" data-reveal style:--i={1}>
+		<h2 id="renovation-title" class="display h2">{renovation.title}</h2>
+		<p class="lead muted">{renovation.summary}</p>
+		<ul class="items" role="list">
+			{#each renovation.items as item, i (item.name)}
+				<li data-reveal style:--i={i + 2}>
+					<h3 class="item-name">{item.name}</h3>
+					<p class="item-detail">{item.detail}</p>
+				</li>
+			{/each}
+		</ul>
+		<a class="btn btn-ink" href="/contact?type=build&project=House%20improvement%20or%20renovation">
+			<span>Ask about your house</span>
+			<Icon name="arrow" class="arrow" />
+		</a>
+	</div>
+</section>
+
 <!-- Plans & permits -->
-<section id="plans-permits" class="split split-rev" aria-labelledby="plans-title">
+<section id="plans-permits" class="split" aria-labelledby="plans-title">
 	<div class="split-media" data-reveal="wipe">
 		<Photo photo={plans.photo} sizes="(min-width: 64rem) 50vw, 100vw" />
 		<ServiceGlyph name="plan" class="split-glyph" />
@@ -89,32 +114,11 @@
 				</li>
 			{/each}
 		</ul>
-		<ul class="permit-row" role="list" aria-label="Permits we assist with">
-			{#each permits as p (p.name)}
-				<li class="permit-chip on-orange">{p.name}</li>
-			{/each}
-		</ul>
 		<a class="btn btn-ink" href="/contact?type=build&project=Plans%20%26%20permits">
 			<span>Ask about plans & permits</span>
 			<Icon name="arrow" class="arrow" />
 		</a>
 	</div>
-</section>
-
-<!-- Finishing trades -->
-<section id="finishing" class="trades" aria-labelledby="finishing-title">
-	<div class="frame trades-head" data-reveal>
-		<h2 id="finishing-title" class="display h2">{finishing.title}</h2>
-		<p class="lead muted">{finishing.summary}</p>
-	</div>
-	<ul class="frame trade-board" role="list">
-		{#each finishing.items as item, i (item.name)}
-			<li class="trade" data-reveal style:--i={i % 4}>
-				<h3 class="trade-name">{item.name}</h3>
-				<p class="trade-detail">{item.detail}</p>
-			</li>
-		{/each}
-	</ul>
 </section>
 
 <!-- Rentals -->
@@ -262,22 +266,6 @@
 		max-width: 56ch;
 	}
 
-	.permit-row {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.35rem;
-		margin: 0 0 0.5rem;
-	}
-
-	.permit-chip {
-		padding: 0.45rem 0.7rem;
-		font-size: 0.875rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.03em;
-		clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
-	}
-
 	@media (min-width: 64rem) {
 		.split {
 			grid-template-columns: 1fr 1fr;
@@ -296,83 +284,6 @@
 
 		.split-copy {
 			padding-left: clamp(2rem, 1rem + 3vw, 5rem);
-		}
-	}
-
-	/* ── Trade board ───────────────────────────────── */
-	.trades {
-		padding-block: var(--section);
-	}
-
-	.trades-head {
-		display: grid;
-		gap: 1.5rem;
-		margin-bottom: 3rem;
-	}
-
-	.trade-board {
-		display: grid;
-		grid-template-columns: 1fr;
-		margin: 0 auto;
-	}
-
-	.trade {
-		display: grid;
-		align-content: space-between;
-		gap: 2.5rem;
-		min-height: 11rem;
-		padding: 1.25rem 1.25rem 1.1rem 0;
-		border-top: 1px solid var(--line-strong);
-	}
-
-	.trade-name {
-		font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.75rem);
-		font-weight: 500;
-		line-height: 1;
-		text-transform: uppercase;
-	}
-
-	.trade-detail {
-		color: var(--steel);
-		font-size: var(--fs-small);
-		max-width: 34ch;
-	}
-
-	@media (min-width: 40rem) {
-		.trade-board {
-			grid-template-columns: 1fr 1fr;
-		}
-
-		.trade:nth-child(odd) {
-			padding-right: 1.5rem;
-		}
-
-		.trade:nth-child(even) {
-			padding-left: 1.5rem;
-			border-left: 1px solid var(--line);
-		}
-	}
-
-	@media (min-width: 64rem) {
-		.trades-head {
-			grid-template-columns: 5fr 7fr;
-			align-items: end;
-		}
-
-		.trade-board {
-			grid-template-columns: repeat(4, 1fr);
-		}
-
-		.trade,
-		.trade:nth-child(odd),
-		.trade:nth-child(even) {
-			padding: 1.25rem 1.5rem 1.25rem;
-			border-left: 1px solid var(--line);
-		}
-
-		.trade:nth-child(4n + 1) {
-			padding-left: 0;
-			border-left: 0;
 		}
 	}
 
