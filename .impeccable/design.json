@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T16:51:33+08:00",
+  "title": "Design System: SAS Construction",
+  "extensions": {
+    "colorMeta": {
+      "orange": { "role": "primary", "displayName": "Chevron Safety Orange", "canonical": "#f7890c", "tonalRamp": ["oklch(15% 0.035 58.5)", "oklch(26% 0.07 58.5)", "oklch(37% 0.1 58.5)", "oklch(48% 0.13 58.5)", "oklch(60% 0.155 58.5)", "oklch(71% 0.172 58.5)", "oklch(83% 0.13 58.5)", "oklch(95% 0.045 58.5)"] },
+      "orange-deep": { "role": "primary", "displayName": "Shaded Chevron (hover only)", "canonical": "#e27a02", "tonalRamp": ["oklch(15% 0.035 57.4)", "oklch(26% 0.07 57.4)", "oklch(37% 0.1 57.4)", "oklch(48% 0.13 57.4)", "oklch(60% 0.155 57.4)", "oklch(71% 0.164 57.4)", "oklch(83% 0.125 57.4)", "oklch(95% 0.045 57.4)"] },
+      "on-orange": { "role": "primary", "displayName": "Ink on Orange", "canonical": "#1c1b19", "tonalRamp": ["oklch(15% 0.004 84.6)", "oklch(26% 0.004 84.6)", "oklch(37% 0.004 84.6)", "oklch(48% 0.004 84.6)", "oklch(60% 0.004 84.6)", "oklch(71% 0.004 84.6)", "oklch(83% 0.004 84.6)", "oklch(95% 0.004 84.6)"] },
+      "on-orange-2": { "role": "primary", "displayName": "Rust", "canonical": "#4a3312", "tonalRamp": ["oklch(15% 0.03 73.3)", "oklch(26% 0.05 73.3)", "oklch(34% 0.058 73.3)", "oklch(48% 0.058 73.3)", "oklch(60% 0.058 73.3)", "oklch(71% 0.05 73.3)", "oklch(83% 0.04 73.3)", "oklch(95% 0.02 73.3)"] },
+      "mark-lit": { "role": "primary", "displayName": "Chevron Lit Face (logo only)", "canonical": "#FF8D06", "tonalRamp": ["oklch(15% 0.035 58.5)", "oklch(26% 0.07 58.5)", "oklch(37% 0.1 58.5)", "oklch(48% 0.13 58.5)", "oklch(60% 0.155 58.5)", "oklch(75% 0.178 58.5)", "oklch(83% 0.13 58.5)", "oklch(95% 0.045 58.5)"] },
+      "mark-shade": { "role": "primary", "displayName": "Chevron Shade Face (logo only)", "canonical": "#EB8205", "tonalRamp": ["oklch(15% 0.035 58.8)", "oklch(26% 0.07 58.8)", "oklch(37% 0.1 58.8)", "oklch(48% 0.13 58.8)", "oklch(60% 0.155 58.8)", "oklch(71% 0.167 58.8)", "oklch(83% 0.125 58.8)", "oklch(95% 0.045 58.8)"] },
+      "paper": { "role": "neutral", "displayName": "Concrete Paper", "canonical": "#f2f1ec", "tonalRamp": ["oklch(15% 0.007 97.4)", "oklch(26% 0.007 97.4)", "oklch(37% 0.007 97.4)", "oklch(48% 0.007 97.4)", "oklch(60% 0.007 97.4)", "oklch(71% 0.007 97.4)", "oklch(83% 0.007 97.4)", "oklch(95.8% 0.007 97.4)"] },
+      "paper-2": { "role": "neutral", "displayName": "Worn Paper", "canonical": "#e8e7e1", "tonalRamp": ["oklch(15% 0.008 98.9)", "oklch(26% 0.008 98.9)", "oklch(37% 0.008 98.9)", "oklch(48% 0.008 98.9)", "oklch(60% 0.008 98.9)", "oklch(71% 0.008 98.9)", "oklch(83% 0.008 98.9)", "oklch(92.7% 0.008 98.9)"] },
+      "concrete": { "role": "neutral", "displayName": "Poured Concrete", "canonical": "#cbcac4", "tonalRamp": ["oklch(15% 0.008 98.9)", "oklch(26% 0.008 98.9)", "oklch(37% 0.008 98.9)", "oklch(48% 0.008 98.9)", "oklch(60% 0.008 98.9)", "oklch(71% 0.008 98.9)", "oklch(83.8% 0.008 98.9)", "oklch(95% 0.008 98.9)"] },
+      "field": { "role": "neutral", "displayName": "Field White", "canonical": "#fbfbf8", "tonalRamp": ["oklch(15% 0.004 106.5)", "oklch(26% 0.004 106.5)", "oklch(37% 0.004 106.5)", "oklch(48% 0.004 106.5)", "oklch(60% 0.004 106.5)", "oklch(71% 0.004 106.5)", "oklch(83% 0.004 106.5)", "oklch(98.7% 0.004 106.5)"] },
+      "paper-lift": { "role": "neutral", "displayName": "Lift White (hover on paper)", "canonical": "#ffffff" },
+      "ink": { "role": "neutral", "displayName": "Charcoal Ink", "canonical": "#1c1b19", "tonalRamp": ["oklch(15% 0.004 84.6)", "oklch(22.2% 0.004 84.6)", "oklch(37% 0.004 84.6)", "oklch(48% 0.004 84.6)", "oklch(60% 0.004 84.6)", "oklch(71% 0.004 84.6)", "oklch(83% 0.004 84.6)", "oklch(95% 0.004 84.6)"] },
+      "ink-2": { "role": "neutral", "displayName": "Plate Charcoal", "canonical": "#262522", "tonalRamp": ["oklch(15% 0.006 91.6)", "oklch(26.4% 0.006 91.6)", "oklch(37% 0.006 91.6)", "oklch(48% 0.006 91.6)", "oklch(60% 0.006 91.6)", "oklch(71% 0.006 91.6)", "oklch(83% 0.006 91.6)", "oklch(95% 0.006 91.6)"] },
+      "ink-3": { "role": "neutral", "displayName": "Lifted Charcoal", "canonical": "#34332f", "tonalRamp": ["oklch(15% 0.007 95.3)", "oklch(26% 0.007 95.3)", "oklch(32.1% 0.007 95.3)", "oklch(48% 0.007 95.3)", "oklch(60% 0.007 95.3)", "oklch(71% 0.007 95.3)", "oklch(83% 0.007 95.3)", "oklch(95% 0.007 95.3)"] },
+      "steel": { "role": "neutral", "displayName": "Rebar Steel", "canonical": "#5d5b55", "tonalRamp": ["oklch(15% 0.01 91.6)", "oklch(26% 0.01 91.6)", "oklch(37% 0.01 91.6)", "oklch(47.1% 0.01 91.6)", "oklch(60% 0.01 91.6)", "oklch(71% 0.01 91.6)", "oklch(83% 0.01 91.6)", "oklch(95% 0.01 91.6)"] },
+      "steel-on-dark": { "role": "neutral", "displayName": "Galvanized Steel", "canonical": "#a9a79f", "tonalRamp": ["oklch(15% 0.012 95.2)", "oklch(26% 0.012 95.2)", "oklch(37% 0.012 95.2)", "oklch(48% 0.012 95.2)", "oklch(60% 0.012 95.2)", "oklch(72.8% 0.012 95.2)", "oklch(83% 0.012 95.2)", "oklch(95% 0.012 95.2)"] },
+      "line": { "role": "neutral", "displayName": "Hairline on Paper", "canonical": "rgb(28 27 25 / 0.16)" },
+      "line-strong": { "role": "neutral", "displayName": "Strong Hairline (rules, borders, outlines)", "canonical": "rgb(28 27 25 / 0.34)" },
+      "line-dark": { "role": "neutral", "displayName": "Hairline on Ink / Blueprint Grid", "canonical": "rgb(242 241 236 / 0.14)" },
+      "line-orange": { "role": "neutral", "displayName": "Hairline on Orange", "canonical": "rgb(28 27 25 / 0.22)" },
+      "error": { "role": "tertiary", "displayName": "Brick (error text)", "canonical": "#9c1f18", "tonalRamp": ["oklch(15% 0.05 28.7)", "oklch(26% 0.1 28.7)", "oklch(37% 0.14 28.7)", "oklch(45.2% 0.162 28.7)", "oklch(60% 0.15 28.7)", "oklch(71% 0.11 28.7)", "oklch(83% 0.065 28.7)", "oklch(95% 0.02 28.7)"] },
+      "error-line": { "role": "tertiary", "displayName": "Brick (invalid field border)", "canonical": "#b3261e" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page H1 only. Uppercase, balanced, lines stagger in with a clip reveal. Heroes tune size within this clamp and cap the measure near 10-15ch." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s. Uppercase, balanced, capped around 11-16ch so they stack in short lines." },
+      "title": { "displayName": "Title", "purpose": "Plate, step and permit titles; card names run one step smaller at the same weight. Uppercase." },
+      "lead": { "displayName": "Lead", "purpose": "Intro paragraph under a headline, max 44ch, usually in steel." },
+      "body": { "displayName": "Body", "purpose": "Running copy and input text, max 62ch, sentence case." },
+      "body-small": { "displayName": "Body Small", "purpose": "Hero sub-copy, trade details, error messages." },
+      "button": { "displayName": "Button", "purpose": "Button labels. Uppercase." },
+      "control": { "displayName": "Control", "purpose": "Nav chips, filters, form labels. Uppercase, 0.05-0.06em." },
+      "data": { "displayName": "Data (Mono)", "purpose": "Addresses, hours, specs, step counters, locations, dt labels, job numbers. Uppercase. Data only, never a kicker." },
+      "tag": { "displayName": "Tag (Mono)", "purpose": "Category and Sample tags on photos, filter counts, the 'optional' marker." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The single easing curve for every transition and entrance." },
+      { "name": "state", "value": "160ms-240ms", "purpose": "Background and colour swaps on buttons, chips, nav, plates, inputs." },
+      { "name": "nudge", "value": "220ms translateX(4px)", "purpose": "Button arrow on hover; footer nav labels slide 0.5rem; service glyph lifts 6px." },
+      { "name": "rise", "value": "900ms, 70ms stagger, translate 0.3-0.35em + clip-path inset reveal", "purpose": "Headline line entrances." },
+      { "name": "panel-wipe", "value": "1100ms clip-path from the bottom-right corner to the pitched polygon", "purpose": "The orange Rent panel entrance." },
+      { "name": "menu-wipe", "value": "420ms clip-path from the right edge", "purpose": "Mobile menu dialog entrance." },
+      { "name": "accordion-open", "value": "500ms clip-path inset top-down + fade", "purpose": "Process step panels." },
+      { "name": "photo-zoom", "value": "900ms scale 1.03-1.04", "purpose": "Card photos on hover; project photos also ease to grayscale(0.15)." },
+      { "name": "page-transition", "value": "View Transitions API default cross-fade", "purpose": "Route changes; skipped under prefers-reduced-motion." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "All animations and transitions collapse; smooth scroll off." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "40rem" },
+      { "name": "md", "value": "56rem" },
+      { "name": "lg", "value": "64rem" }
+    ],
+    "geometry": {
+      "rooflinePitch": { "value": "0.6", "angle": "31deg", "purpose": "tan of the SAS chevron roof slope. Large diagonal cuts: drop = run x 0.6 (8rem/4.8rem, 9rem/5.4rem, 16rem/9.6rem, 4.2rem/2.5rem). Raking upright edges take the same ratio against the vertical." },
+      "chamfers": [
+        { "name": "control", "value": "8px-10px", "purpose": "Buttons (top-right + bottom-left) and permit chips." },
+        { "name": "cut", "value": "14px", "purpose": "All four corners of plates, tiles and choice plates; single corner on the signboard logo plate." },
+        { "name": "card", "value": "18px", "purpose": "Equipment cards, two opposite corners." },
+        { "name": "cut-lg", "value": "22px", "purpose": "Large plates and rate notes; single corner on the job-order slip and process thumbnails." }
+      ],
+      "blueprintGrid": { "value": "18px square grid of 1px lines", "purpose": "Texture on dark plates (line-dark) and orange glyph plates (ink at 9-10%)." },
+      "photoTreatment": { "value": "grayscale(1) contrast(1.06) brightness(1.02); object-fit: cover", "purpose": "Every photograph, on a concrete ground while loading." }
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Orange chamfered action plate, label left and arrow right. The default call to action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><span>Start a job order</span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.25rem; min-height: 3rem; padding: 0.7rem 1rem 0.7rem 1.1rem; background: var(--orange, #f7890c); color: var(--ink, #1c1b19); border: 0; font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.1; text-decoration: none; cursor: pointer; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary svg { flex: none; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: var(--orange-deep, #e27a02); } .ds-btn-primary:hover svg { transform: translateX(4px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--ink, #1c1b19); outline-offset: -5px; }"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Charcoal chamfered plate. Secondary action on paper, primary action on orange.",
+      "html": "<a class=\"ds-btn-ink\" href=\"#\"><span>Build with SAS</span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-ink { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.25rem; min-height: 3rem; padding: 0.7rem 1rem 0.7rem 1.1rem; background: var(--ink, #1c1b19); color: var(--paper, #f2f1ec); border: 0; font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.1; text-decoration: none; cursor: pointer; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ink svg { flex: none; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-ink:hover { background: var(--ink-3, #34332f); } .ds-btn-ink:hover svg { transform: translateX(4px); } .ds-btn-ink:focus-visible { outline: 2px solid var(--orange, #f7890c); outline-offset: -5px; }"
+    },
+    {
+      "name": "Paper Button (on ink)",
+      "kind": "button",
+      "refersTo": "button-paper",
+      "description": "Paper chamfered plate for actions on dark bands; lifts to white on hover.",
+      "html": "<div class=\"ds-btn-paper-ground\"><a class=\"ds-btn-paper\" href=\"#\"><span>Call 0915 448 3783</span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\" stroke-linejoin=\"miter\" aria-hidden=\"true\"><path d=\"M8 3H5L3.5 4.5c0 9 7 16 16 16L21 19v-3l-4-1.5-2 2c-2.5-1-5-3.5-6-6l2-2L9.5 4.5Z\"/></svg></a></div>",
+      "css": ".ds-btn-paper-ground { padding: 1.5rem; background: var(--ink, #1c1b19); } .ds-btn-paper { display: inline-flex; align-items: center; justify-content: space-between; gap: 1.25rem; min-height: 3rem; padding: 0.7rem 1rem 0.7rem 1.1rem; background: var(--paper, #f2f1ec); color: var(--ink, #1c1b19); border: 0; font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.1; text-decoration: none; cursor: pointer; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-paper svg { flex: none; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-paper:hover { background: #ffffff; } .ds-btn-paper:hover svg { transform: translateX(4px); } .ds-btn-paper:focus-visible { outline: 2px solid var(--orange, #f7890c); outline-offset: -5px; }"
+    },
+    {
+      "name": "Photo Tags",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Mono category tag and the ink/orange Sample tag that marks placeholder content.",
+      "html": "<div class=\"ds-tags\"><span class=\"ds-tag\">Residential</span><span class=\"ds-tag ds-tag-sample\">Sample photo</span></div>",
+      "css": ".ds-tags { display: flex; flex-wrap: wrap; gap: 4px; padding: 0.75rem; background: var(--concrete, #cbcac4); } .ds-tag { display: inline-block; padding: 0.3rem 0.55rem 0.28rem; background: var(--paper, #f2f1ec); color: var(--ink, #1c1b19); font-family: var(--font-mono, 'Azeret Mono Variable', ui-monospace, monospace); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; } .ds-tag-sample { background: var(--ink, #1c1b19); color: var(--orange, #f7890c); }"
+    },
+    {
+      "name": "Nav Chips",
+      "kind": "nav",
+      "refersTo": "nav-chip",
+      "description": "Paper chips butted at 2px; current page inverts to ink.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a class=\"ds-nav-link\" href=\"#\" aria-current=\"page\">Services</a><a class=\"ds-nav-link\" href=\"#\">Projects</a><a class=\"ds-nav-link\" href=\"#\">Rentals</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 2px; padding: 1rem; background: var(--concrete, #cbcac4); } .ds-nav-link { display: block; padding: 0.55rem 0.85rem; background: var(--paper, #f2f1ec); color: var(--ink, #1c1b19); font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: background-color 160ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-link:hover { background: #ffffff; } .ds-nav-link[aria-current='page'] { background: var(--ink, #1c1b19); color: var(--paper, #f2f1ec); } .ds-nav-link:focus-visible { outline: 2px solid var(--ink, #1c1b19); outline-offset: -4px; } .ds-nav-link[aria-current='page']:focus-visible { outline-color: var(--orange, #f7890c); }"
+    },
+    {
+      "name": "Filter Chips",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "Toggle filters with mono counts; pressed turns orange.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filter\"><button type=\"button\" class=\"ds-filter\" aria-pressed=\"true\">All <span class=\"ds-count\">8</span></button><button type=\"button\" class=\"ds-filter\" aria-pressed=\"false\">Residential <span class=\"ds-count\">5</span></button><button type=\"button\" class=\"ds-filter\" aria-pressed=\"false\">Commercial <span class=\"ds-count\">2</span></button></div>",
+      "css": ".ds-filters { display: flex; flex-wrap: wrap; gap: 0.35rem; } .ds-filter { display: inline-flex; align-items: center; gap: 0.6rem; min-height: 2.5rem; padding: 0.45rem 0.8rem; background: var(--paper-2, #e8e7e1); color: var(--ink, #1c1b19); border: 0; font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; transition: background-color 160ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-filter:hover { background: var(--concrete, #cbcac4); } .ds-filter[aria-pressed='true'] { background: var(--orange, #f7890c); } .ds-filter:focus-visible { outline: 2px solid var(--ink, #1c1b19); outline-offset: 2px; } .ds-count { font-family: var(--font-mono, 'Azeret Mono Variable', ui-monospace, monospace); font-size: 0.6875rem; color: var(--steel, #5d5b55); } .ds-filter[aria-pressed='true'] .ds-count { color: var(--on-orange-2, #4a3312); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square field-white box with a 2px ink bottom rule; orange focus outline; brick error state.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-mobile\">Mobile number</label><input id=\"ds-mobile\" class=\"ds-input\" type=\"tel\" placeholder=\"09XX XXX XXXX\"><label class=\"ds-label\" for=\"ds-email\">Email <span class=\"ds-opt\">optional</span></label><input id=\"ds-email\" class=\"ds-input\" type=\"email\" aria-invalid=\"true\" value=\"not-an-email\"><p class=\"ds-err\">Enter an email like name@example.com.</p></div>",
+      "css": ".ds-field { display: grid; gap: 0.45rem; max-width: 24rem; } .ds-label { font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink, #1c1b19); } .ds-opt { margin-left: 0.35rem; font-family: var(--font-mono, 'Azeret Mono Variable', ui-monospace, monospace); font-size: 0.6875rem; font-weight: 400; letter-spacing: 0.04em; color: var(--steel, #5d5b55); } .ds-input { width: 100%; min-height: 3.1rem; padding: 0.7rem 0.85rem; background: #fbfbf8; color: var(--ink, #1c1b19); border: 1px solid var(--line-strong, rgb(28 27 25 / 0.34)); border-bottom: 2px solid var(--ink, #1c1b19); border-radius: 0; font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 1.0625rem; transition: border-color 160ms cubic-bezier(0.16, 1, 0.3, 1), background-color 160ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-input:hover { background-color: #ffffff; } .ds-input:focus-visible { outline: 2px solid var(--orange, #f7890c); outline-offset: 0; background-color: #ffffff; } .ds-input[aria-invalid='true'] { border-color: #b3261e; border-bottom-color: #b3261e; } .ds-err { margin: 0; color: #9c1f18; font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 0.9375rem; font-weight: 500; }"
+    },
+    {
+      "name": "Service Plate",
+      "kind": "card",
+      "refersTo": "plate-dark",
+      "description": "Chamfered charcoal plate with blueprint grid, uppercase title and line glyph, plus a separate mono caption plate. The first in a set is orange.",
+      "html": "<div class=\"ds-plates\"><a class=\"ds-plate\" href=\"#\"><div class=\"ds-plate-top ds-orange\"><h3 class=\"ds-plate-title\">Construction</h3><svg class=\"ds-plate-glyph\" viewBox=\"0 0 120 120\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M12 50 60 21l48 29\"/><path d=\"M20 55 60 31l40 24\"/><path d=\"M24 53v47M60 31v69M96 53v47\"/><path d=\"M24 76h72M24 100h72\"/></svg></div><p class=\"ds-plate-cap ds-orange\">Houses, townhouses, commercial</p></a><a class=\"ds-plate\" href=\"#\"><div class=\"ds-plate-top\"><h3 class=\"ds-plate-title\">Plans &amp; permits</h3><svg class=\"ds-plate-glyph\" viewBox=\"0 0 120 120\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M22 16h60l16 16v74H22z\"/><path d=\"M82 16v16h16\"/><path d=\"M32 40h40v36H32z\"/><circle cx=\"82\" cy=\"90\" r=\"9\"/><circle cx=\"82\" cy=\"90\" r=\"5\"/></svg></div><p class=\"ds-plate-cap\">Design, sign &amp; seal, permits</p></a></div>",
+      "css": ".ds-plates { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; } .ds-plate { display: grid; gap: 0.35rem; text-decoration: none; } .ds-plate-top { display: grid; grid-template-rows: auto 1fr; min-height: 14rem; padding: 1.1rem 1.2rem; background-color: var(--ink-2, #262522); color: var(--paper, #f2f1ec); background-image: linear-gradient(rgb(242 241 236 / 0.14) 1px, transparent 1px), linear-gradient(90deg, rgb(242 241 236 / 0.14) 1px, transparent 1px); background-size: 18px 18px; clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px); transition: background-color 240ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-plate-top.ds-orange { background-color: var(--orange, #f7890c); color: var(--ink, #1c1b19); background-image: linear-gradient(rgb(28 27 25 / 0.1) 1px, transparent 1px), linear-gradient(90deg, rgb(28 27 25 / 0.1) 1px, transparent 1px); } .ds-plate:hover .ds-plate-top:not(.ds-orange) { background-color: var(--ink-3, #34332f); } .ds-plate-title { margin: 0; font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 1.4rem; font-weight: 500; line-height: 1; text-transform: uppercase; max-width: 10ch; } .ds-plate-glyph { align-self: center; justify-self: center; width: 6.5rem; margin-block: 1rem; transition: translate 500ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-plate:hover .ds-plate-glyph { translate: 0 -6px; } .ds-plate:focus-visible { outline: 2px solid var(--ink, #1c1b19); outline-offset: 4px; } .ds-plate-cap { margin: 0; padding: 0.9rem 1.2rem; background: var(--ink-2, #262522); color: var(--steel-on-dark, #a9a79f); font-family: var(--font-mono, 'Azeret Mono Variable', ui-monospace, monospace); font-size: 0.75rem; letter-spacing: 0.03em; line-height: 1.5; text-transform: uppercase; clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px); } .ds-plate-cap.ds-orange { background: var(--orange, #f7890c); color: var(--on-orange-2, #4a3312); }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-title-plate",
+      "description": "Grayscale 4:3 photo with tags, a paper title plate with a raking right edge, and an orange + action.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-media\" role=\"img\" aria-label=\"Photo placeholder\"></div><div class=\"ds-card-tags\"><span class=\"ds-card-tag\">Residential</span><span class=\"ds-card-tag ds-card-sample\">Sample photo</span></div><div class=\"ds-card-plate\"><h3 class=\"ds-card-title\">Two-storey residence</h3><p class=\"ds-card-loc\">Pardo, Cebu City</p></div><a class=\"ds-card-more\" href=\"#\" aria-label=\"Ask about a project like this\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></a></article>",
+      "css": ".ds-card { position: relative; display: grid; max-width: 30rem; background: var(--ink, #1c1b19); } .ds-card-media { grid-area: 1 / 1; aspect-ratio: 4 / 3; background-color: var(--concrete, #cbcac4); transition: scale 900ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-card:hover .ds-card-media { scale: 1.03; } .ds-card-tags { position: absolute; top: 0.75rem; left: 0.75rem; display: flex; flex-wrap: wrap; gap: 4px; } .ds-card-tag { padding: 0.3rem 0.55rem 0.28rem; background: var(--paper, #f2f1ec); color: var(--ink, #1c1b19); font-family: var(--font-mono, 'Azeret Mono Variable', ui-monospace, monospace); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; } .ds-card-sample { background: var(--ink, #1c1b19); color: var(--orange, #f7890c); } .ds-card-plate { grid-area: 1 / 1; align-self: end; justify-self: start; width: min(88%, 26rem); padding: 0.8rem 3.25rem 0.75rem 0.9rem; background: var(--paper, #f2f1ec); color: var(--ink, #1c1b19); clip-path: polygon(0 0, calc(100% - 2.4rem) 0, 100% 100%, 0 100%); } .ds-card-title { margin: 0; font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); font-size: 1.15rem; font-weight: 500; line-height: 1.1; text-transform: uppercase; } .ds-card-loc { margin: 0.3rem 0 0; font-family: var(--font-mono, 'Azeret Mono Variable', ui-monospace, monospace); font-size: 0.75rem; font-weight: 450; letter-spacing: 0.04em; text-transform: uppercase; color: var(--steel, #5d5b55); } .ds-card-more { position: absolute; right: 0.75rem; bottom: 0.75rem; display: grid; place-items: center; width: 2.5rem; height: 2.5rem; background: var(--orange, #f7890c); color: var(--ink, #1c1b19); transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-card-more:hover { background: var(--paper, #f2f1ec); } .ds-card-more:focus-visible { outline: 2px solid var(--paper, #f2f1ec); outline-offset: 2px; }"
+    },
+    {
+      "name": "Job-Order Slip",
+      "kind": "custom",
+      "description": "Receipt-like live summary beside the inquiry form: ink header with orange mono job number, dashed rows, one large chamfer.",
+      "html": "<div class=\"ds-slip\"><div class=\"ds-slip-head\"><span class=\"ds-slip-title\">Job order</span><span class=\"ds-slip-no\">JO-280926-417</span></div><dl class=\"ds-slip-rows\"><div class=\"ds-slip-row\"><dt>Type</dt><dd>Build or renovate</dd></div><div class=\"ds-slip-row\"><dt>Site</dt><dd>Talisay</dd></div><div class=\"ds-slip-row\"><dt>Budget</dt><dd class=\"ds-empty\">—</dd></div></dl><div class=\"ds-slip-foot\">SAS Construction · Cebu</div></div>",
+      "css": ".ds-slip { max-width: 22rem; background: #fbfbf8; border: 1px solid var(--line-strong, rgb(28 27 25 / 0.34)); color: var(--ink, #1c1b19); font-family: var(--font-display, 'Chakra Petch', 'Arial Narrow', sans-serif); clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%); } .ds-slip-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 0.8rem 1rem; background: var(--ink, #1c1b19); color: var(--paper, #f2f1ec); } .ds-slip-title { font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; } .ds-slip-no, .ds-slip-row dt, .ds-slip-foot { font-family: var(--font-mono, 'Azeret Mono Variable', ui-monospace, monospace); font-size: 0.75rem; font-weight: 450; letter-spacing: 0.04em; text-transform: uppercase; } .ds-slip-no { color: var(--orange, #f7890c); } .ds-slip-rows { margin: 0; padding: 0.4rem 1rem; } .ds-slip-row { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.75rem; padding: 0.55rem 0; border-bottom: 1px dashed var(--line-strong, rgb(28 27 25 / 0.34)); } .ds-slip-row dt { color: var(--steel, #5d5b55); padding-top: 0.15rem; } .ds-slip-row dd { margin: 0; font-weight: 500; } .ds-slip-row dd.ds-empty { color: var(--steel, #5d5b55); } .ds-slip-foot { padding: 0.8rem 1rem 1.2rem; color: var(--steel, #5d5b55); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Signboard on the Frame",
+    "overview": "The site looks like a Cebu job site. Grayscale photographs of concrete frames, rebar and machinery form the ground. SAS safety orange is bolted onto that ground as signboard plates. It appears as whole fields: the Rent panel, the footer, the mobile menu, permit tiles and the first plate of a set. Charcoal ink carries the dark bands and plates, and a faint 18px blueprint grid runs over it. Every large panel is cut on the diagonal of the SAS roof chevron (31°, tan ≈ 0.6), so a photo and the plate beside it share one roof line. Corners are chamfered, never rounded. Nothing casts a shadow.\n\nDensity is generous between sections (4.5–9rem of air) and tight inside them. Plates, cards and tiles meet at 8px seams, like panels on a site hoarding. Everything that speaks is uppercase Chakra Petch. Everything that measures is set in Azeret Mono: addresses, hours, specs and job numbers. Body copy stays in sentence case and in the same squared sans.\n\nThe world comes from the client-pinned GravisPoint concept boards, recoloured from their red to SAS orange. The build keeps the boards' plates, chamfers, blueprint grid, grayscale photography, mono data layer, poster-scale footer mark and orange shoulder footer. It rejects their stat counters. The orange tile grid lists the permits SAS handles, with no numbers. Placeholder content carries a visible \"Sample\" tag until the client supplies the real thing.",
+    "keyCharacteristics": [
+      "Concrete paper ground, charcoal ink bands, safety orange used as whole panels.",
+      "Chamfered plates plus a single 31° roof-pitch cut per large panel or photo.",
+      "Grayscale photography throughout. SAS orange is the only saturated colour on the page.",
+      "Chakra Petch uppercase for signage. Azeret Mono only for data.",
+      "Flat: no radius, no shadows. Depth comes from tone steps, overlap and the cut.",
+      "Honest placeholders: Sample tags on stock photos and unconfirmed listings."
+    ],
+    "rules": [
+      { "name": "The Field, Not Frosting Rule", "body": "Orange arrives as whole panels, plates and buttons. It is never a tint, a gradient, a glow or a thin decorative stroke. The only small-scale orange is the roof-marker bullet on service item lists.", "section": "colors" },
+      { "name": "The Measured Pairing Rule", "body": "Text pairings are fixed: ink or rust on orange; steel on paper or worn paper; galvanized steel on ink or plate charcoal; orange text only on ink or plate charcoal (7.0:1 / 6.2:1). Orange text on paper (2.2:1), steel on concrete (4.1:1) and rust on shaded orange (4.0:1) are not allowed.", "section": "colors" },
+      { "name": "The First Plate Rule", "body": "In a sequence or menu of plates (service plates, rental steps), only the first plate is orange and the rest are ink or worn paper. A block of orange tiles (the permit tiles) counts as one field and always sits beside a neutral panel.", "section": "colors" },
+      { "name": "The Mono Is Data Rule", "body": "Azeret Mono is only for things you could measure, dial or file: addresses, hours, phone labels, specs, locations, step counters, job numbers and tags. It is never used for paragraph copy, and never as a kicker above a heading.", "section": "typography" },
+      { "name": "The Uppercase Voice Rule", "body": "Everything that works as signage is uppercase Chakra Petch: headings, plate titles, buttons, nav, labels. Everything that explains stays in sentence case: body, leads, form input text, details.", "section": "typography" },
+      { "name": "The Bolted Seam Rule", "body": "Plates, cards and tiles meet at a `seam` (8px). Button and chip clusters sit at a `cluster` gap (0.35–0.4rem), and nav chips at 2px. Wide gutters never separate plates in the same set.", "section": "layout" },
+      { "name": "The Hairline Spine Rule", "body": "Two-column sections divide on a 1px `line` spine instead of cards or background changes. The intro side stays sticky while the content side scrolls.", "section": "layout" },
+      { "name": "The No-Shadow Rule", "body": "Surfaces are flat at rest and flat on hover. To separate two layers, step the tone, overlap them, or cut one of them.", "section": "elevation" },
+      { "name": "The Cut-Not-Curved Rule", "body": "Corners are chamfered or square. A curve belongs only inside a drawn glyph or the logo's chevron feet, never on a box.", "section": "shapes" },
+      { "name": "The Roof-Pitch Rule", "body": "Any diagonal larger than a chamfer is cut at the SAS pitch: 0.6 against the horizontal for roof lines, or against the vertical for raking edges. No other angle is used.", "section": "shapes" },
+      { "name": "The Visible Sample Rule", "body": "Stock photography and unconfirmed entries (projects, equipment) carry an ink Sample tag with orange text, driven by the content's `sample` flag. The tag stays until real SAS content replaces the entry. It is never hidden to make a layout look finished.", "section": "components" },
+      { "name": "The Grayscale Site Rule", "body": "Every photograph gets the same grayscale treatment, so SAS orange is the only saturated colour on the page.", "section": "components" },
+      { "name": "The Cut Reveal Rule", "body": "Things enter by being uncovered along a cut: a clip-path reveal with a short travel of 0.35em or less. They never fly in from a distance or bounce.", "section": "components" }
+    ],
+    "dos": [
+      "Do cut large panels and photos at the SAS roof pitch (drop = run × 0.6), once per panel, on the corner that meets its neighbour.",
+      "Do chamfer plates at 14px, large plates at 22px, and buttons at small two-corner cuts; keep every box's radius at 0.",
+      "Do use orange as a whole field (panel, plate, button, tile block) with ink (7.0:1) or rust (4.8:1) text on it.",
+      "Do make only the first plate orange in a sequence of plates; the rest are ink or worn paper.",
+      "Do run every photo through the shared grayscale treatment.",
+      "Do set signage in uppercase Chakra Petch and data (addresses, hours, specs, counters, job numbers, tags) in Azeret Mono.",
+      "Do join plates and cards at 8px seams, and split desktop columns on a 1px hairline spine.",
+      "Do end every page at a phone number: the closing band, footer and menu carry call actions at full button height (3rem or more), and a compact header call joins them from 40rem up.",
+      "Do mark stock photos and unconfirmed listings with the Sample tag until SAS supplies the real content."
+    ],
+    "donts": [
+      "Don't round corners on any box, button, chip, input or card.",
+      "Don't use box, drop or text shadows; separate layers by tone, overlap or cut.",
+      "Don't set orange text on paper (2.2:1), steel text on concrete (4.1:1), or rust text on shaded orange (4.0:1).",
+      "Don't use orange as a tint, a gradient, a glow or a thin accent line; the only gradients are the blueprint grid, the select chevron and the closing-band scrim.",
+      "Don't fill the orange tile grid with counters, percentages, years in business, ratings or client logos; the tiles carry verifiable facts such as permit types.",
+      "Don't show a photo in full colour or tint it orange.",
+      "Don't put a mono line above a heading as a kicker or eyebrow; mono carries data only.",
+      "Don't cut a diagonal larger than a chamfer at any angle other than the roof pitch.",
+      "Don't remove or restyle away a Sample tag while the entry is still a placeholder."
+    ]
+  }
+}

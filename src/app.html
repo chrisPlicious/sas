@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="text-scale" content="scale" />
+		<link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+		<link rel="preconnect" href="https://images.pexels.com" crossorigin />
+		<!-- Motion gates, decided before first paint so nothing flashes.
+		     Entry loader: once per browser session; ?intro forces a replay.
+		     Section reveals: only with JS + motion allowed.
+		     Reduced motion skips both. Timeouts release the page if the app bundle never runs. -->
+		<script>
+			(function () {
+				try {
+					var root = document.documentElement;
+					var calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+					var force = /[?&]intro\b/.test(location.search);
+					var seen = sessionStorage.getItem('sas-intro-seen');
+					if (force || (!seen && !calm)) {
+						root.classList.add('sas-intro');
+						setTimeout(function () {
+							root.classList.remove('sas-intro');
+						}, 15000);
+					}
+					if (!calm && 'IntersectionObserver' in window) {
+						root.classList.add('reveal-ready');
+						setTimeout(function () {
+							if (!window.__sasReveal) root.classList.remove('reveal-ready');
+						}, 5000);
+					}
+				} catch (e) {}
+			})();
+		</script>
+		<!-- Business facts mirror src/lib/content/site.ts; update both together. -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "GeneralContractor",
+				"name": "SAS Construction Services and Equipment Rentals – Cebu",
+				"slogan": "Affordable Construction Equipment for Rent in Cebu",
+				"telephone": ["+639154483783", "+639272249302"],
+				"email": "alvinsasing97@gmail.com",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Enriquez Compound, Atillo Street, Punta Princesa",
+					"addressLocality": "Cebu City",
+					"addressRegion": "Cebu",
+					"addressCountry": "PH"
+				},
+				"areaServed": ["Cebu City", "Mandaue", "Talisay"]
+			}
+		</script>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<!--
+		DIRECTION CONTRACT · SAS Construction
+		THESIS: Two front doors, one yard. Building and renting share the first viewport as equals; refuses the contractor default of hero photo + "quality you can trust" + stat counters.
+		OWN-WORLD: Concrete paper #F2F1EC, charcoal ink, SAS safety-orange fields at page scale. Chamfered plates; every panel cut at the 31° SAS roof pitch; grayscale site photography; blueprint grid on dark plates; Chakra Petch uppercase display, Azeret Mono for data only.
+		STORY: Visitor sees SAS carries a job from plans and permits to finishing, and also rents the equipment; believes it through the real workflow, permit list and PRC sign & seal; calls or starts a job order.
+		FIRST VIEWPORT: Grayscale concrete frame across the top; signboard logo plate top-left, nav chips top-right; orange Rent panel on the right cut at 31°; "We build from plan to roof. We rent what builds it." bottom-left with the Build action; Rent action in orange; phone notch in ink.
+		FORM: Brief-pinned (client-supplied GravisPoint boards) adapted to SAS brand; seed 05300bc1 overridden by the pin.
+		FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+		-->
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
