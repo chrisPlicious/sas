@@ -3,8 +3,10 @@
 	import PageHero from '$lib/components/PageHero.svelte';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 	import Icon from '$lib/components/Icon.svelte';
-	import { photos } from '$lib/content/photos';
 	import { projects, projectCategories, type ProjectCategory } from '$lib/content/projects';
+
+	// Hero shows a real SAS handover: the Lagtang renovation's cover photo
+	const heroPhoto = projects.find((p) => p.slug === 'lagtang')!.photo;
 
 	let filter = $state<ProjectCategory | 'All'>('All');
 
@@ -17,19 +19,18 @@
 
 <Seo
 	title="Projects"
-	description="Houses, townhouses, renovations and light commercial work by SAS Construction around Cebu City, Mandaue and Talisay."
+	description="Two-storey houses, renovations, kitchen cabinetry, tiling and concreting by SAS Construction in Minglanilla, Talisay and around Cebu."
 />
 
 <PageHero
 	id="projects-title"
 	title="Projects around Cebu."
-	lead="Two-storey homes, renovations and commercial buildings, followed from ocular inspection to handover with progress videos along the way."
-	photo={photos.houseTropical}
-	photoNote="Sample photo"
+	lead="Two-storey homes, renovations, kitchens, tiling and concrete work, followed from ocular inspection to handover. Open a project to see SAS's own photos."
+	photo={heroPhoto}
 >
 	{#snippet meta()}
-		<span>Residential · Commercial</span>
-		<span>Improvement · Renovation</span>
+		<span>Residential · Renovation</span>
+		<span>Finishing · Concreting</span>
 	{/snippet}
 	{#snippet actions()}
 		<a class="btn" href="/contact?type=build">
@@ -57,7 +58,7 @@
 	<p class="visually-hidden" aria-live="polite">Showing {shown.length} projects</p>
 
 	<ul class="frame grid" role="list">
-		{#each shown as project, i (project.title)}
+		{#each shown as project, i (project.slug)}
 			<li data-reveal="wipe" style:--i={i % 2}><ProjectCard {project} sizes="(min-width: 56rem) 45vw, 92vw" /></li>
 		{/each}
 	</ul>

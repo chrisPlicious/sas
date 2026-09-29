@@ -183,7 +183,7 @@
 		</div>
 	</div>
 	<ul class="track" role="list" {@attach registerTrack}>
-		{#each projects.slice(0, 6) as project, i (project.title)}
+		{#each projects.filter((p) => p.gallery) as project, i (project.slug)}
 			<li data-reveal="wipe" style:--i={i}><ProjectCard {project} /></li>
 		{/each}
 	</ul>

@@ -53,8 +53,9 @@ A local, family-run Cebu contractor (SAS = the Sasing family name) that covers t
 - Logo (flat, and 3D wall-sign mockup).
 - ~1,800 Facebook followers; 1 public Facebook review (not quotable yet).
 - A known project: two-storey residential building in Pardo, Cebu (progress video on Facebook).
+- Real projects confirmed by the user from SAS's Facebook posts (2026-09-29): two-storey house, Tungkop, Minglanilla (design: Cuyos&Gonzaga Design + Architecture); major renovation, Preciousville, Lagtang, Talisay; kitchen cabinetry, Minglanilla; tiling works; concreting works; one-storey house, Tungkil, Minglanilla (replaces the Pardo card, which had no SAS photo). Their photos come from those posts.
 
-**Do not fabricate:** PCAB license or any license number, SEC/corporate registration, founding year or founding story, project counts, years-in-business, satisfaction rates, testimonials, client names, rental rates, or equipment inventory. Project photos are placeholders until the client supplies real ones; equipment list and images will be provided by the user.
+**Do not fabricate:** PCAB license or any license number, SEC/corporate registration, founding year or founding story, project counts, years-in-business, satisfaction rates, testimonials, client names, rental rates, or equipment inventory. Project photos come only from SAS's own posts or files, never stock presented as their work; equipment list and images will be provided by the user.
 
 ## Product Principles
 

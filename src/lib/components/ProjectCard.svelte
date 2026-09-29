@@ -2,8 +2,12 @@
 	import type { Project } from '$lib/content/projects';
 	import Photo from './Photo.svelte';
 	import Icon from './Icon.svelte';
+	import ProjectGallery from './ProjectGallery.svelte';
 
 	let { project, sizes = '(min-width: 64rem) 40vw, 85vw' }: { project: Project; sizes?: string } = $props();
+
+	let viewer = $state<ReturnType<typeof ProjectGallery>>();
+	const count = $derived(project.gallery?.length ?? 0);
 </script>
 
 <article class="card">
@@ -11,6 +15,9 @@
 		<Photo photo={project.photo} {sizes} />
 		<div class="tags">
 			<span class="tag">{project.category}</span>
+			{#if count}
+				<span class="tag">{count} photos</span>
+			{/if}
 			{#if project.sample}
 				<span class="tag tag-sample">Sample photo</span>
 			{/if}
@@ -20,6 +27,12 @@
 		<h3 class="title">{project.title}</h3>
 		<p class="mono loc">{project.location}</p>
 	</div>
+	{#if count}
+		<button class="open" type="button" onclick={() => viewer?.show()}>
+			<span class="visually-hidden">View {count} photos of {project.title}, {project.location}</span>
+		</button>
+		<ProjectGallery {project} bind:this={viewer} />
+	{/if}
 	<a class="more" href="/contact?type=build&project={encodeURIComponent(project.title)}">
 		<Icon name="plus" size={18} />
 		<span class="visually-hidden">Ask about a project like {project.title}</span>
@@ -94,8 +107,25 @@
 		color: var(--steel);
 	}
 
+	/* Whole card opens the photo viewer; the "+" action sits above it */
+	.open {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		padding: 0;
+		background: none;
+		border: 0;
+		cursor: zoom-in;
+	}
+
+	.open:focus-visible {
+		outline: 2px solid var(--orange);
+		outline-offset: -4px;
+	}
+
 	.more {
 		position: absolute;
+		z-index: 2;
 		right: 0.75rem;
 		bottom: 0.75rem;
 		display: grid;

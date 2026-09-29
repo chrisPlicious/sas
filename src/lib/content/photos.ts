@@ -11,7 +11,7 @@ export type Photo = {
 	alt: string;
 	w: number;
 	h: number;
-	host?: 'unsplash' | 'pexels' | 'commons';
+	host?: 'unsplash' | 'pexels' | 'commons' | 'local';
 	/** Render in full colour instead of the site's grayscale treatment. */
 	color?: boolean;
 	/** Attribution the licence asks for (Commons files). */
@@ -31,6 +31,10 @@ const wm = (id: string, alt: string, w: number, h: number, credit: Credit): Phot
 });
 const commonsPage = (file: string) => `https://commons.wikimedia.org/wiki/File:${file}`;
 
+// SAS's own photos, served from static/. Each is saved as `<id>-<width>.jpg` at
+// 800w and at full size (w, at most 1600), e.g. 'projects/tungkop/1-800.jpg'.
+export const own = (id: string, alt: string, w: number, h: number): Photo => ({ id, alt, w, h, host: 'local' });
+
 // Equipment catalogue shots: the machine alone, in colour.
 const kit = (p: Photo): Photo => ({ ...p, color: true });
 
@@ -45,16 +49,6 @@ export const photos = {
 	interiorShell: u('photo-1673978484281-e9370ac3b81c', 'Unfinished interior room with bare walls, ready for finishing'),
 	houseScaffold: u('photo-1593786267440-550458cc882a', 'House under construction with scaffolding'),
 	houseFrame: u('photo-1693639767415-27ff64ce4da2', 'Frame of a two-storey house under construction'),
-	// Finished work for the project cards (stand-ins until SAS supplies its own)
-	houseTropical: u('photo-1759369484998-eef1942f27e7', 'Finished modern two-storey house among palm trees', 3600, 2800),
-	houseTwoStorey: u('photo-1784091473955-f66695d19b58', 'Finished two-storey house with a green roof behind a fence and tropical trees', 3598, 4792),
-	houseMultiStorey: u('photo-1682045984810-59d72b8788ea', 'Finished multi-storey house with balconies on each floor', 3019, 3751),
-	townhouseRow: u('photo-1663923330731-d2c5586aefb7', 'Row of finished two-storey townhouses', 3992, 2992),
-	homeExtension: u('photo-1633354747567-e0682586f082', 'Finished modern home extension under a pergola roof', 5000, 3938),
-	shopInterior: u('photo-1759050486852-fdfe2fdc7bea', 'Finished shop interior with an arched timber ceiling and display shelving', 4160, 6240),
-	commercialBlock: u('photo-1762867089896-e51054249a41', 'Finished low-rise building with shops at street level and balconies above', 5536, 4160),
-	kitchenFitOut: px('7195739', 'Finished kitchen with timber cabinets and a dining table', 7360, 4912),
-	openPlanLiving: u('photo-1649083048337-4aeb6dda80bb', 'Renovated open-plan living room and kitchen', 5000, 3333),
 	// Rental equipment (stand-ins until SAS photographs its own units)
 	mixer: kit(u('photo-1786269691601-ac1357298c61', 'Orange one-bagger drum concrete mixer on its wheeled stand', 6000, 4089)),
 	mixerYard: kit(px('2333694', 'Orange drum concrete mixer standing in a yard by a brick wall', 2560, 1707)),
@@ -105,8 +99,10 @@ export const photos = {
 // Commons only serves thumbnails at its standard widths, and never wider than the file.
 const COMMONS_WIDTHS = [500, 960, 1280, 1920];
 const commonsWidths = (p: Photo) => [...COMMONS_WIDTHS.filter((w) => w < p.w), p.w];
+const localWidths = (p: Photo) => [...[800].filter((w) => w < p.w), p.w];
 
 export function src(p: Photo, width: number) {
+	if (p.host === 'local') return `/${p.id}-${localWidths(p).find((s) => s >= width) ?? p.w}.jpg`;
 	if (p.host === 'commons') {
 		const w = commonsWidths(p).find((s) => s >= width) ?? p.w;
 		const base = 'https://upload.wikimedia.org/wikipedia/commons';
@@ -119,5 +115,6 @@ export function src(p: Photo, width: number) {
 
 export function srcset(p: Photo, widths = [480, 800, 1200, 1800, 2400]) {
 	if (p.host === 'commons') widths = commonsWidths(p);
+	if (p.host === 'local') widths = localWidths(p);
 	return widths.map((w) => `${src(p, w)} ${w}w`).join(', ');
 }

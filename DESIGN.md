@@ -231,7 +231,7 @@ The world comes from the client-pinned GravisPoint concept boards, recoloured fr
 **Key Characteristics:**
 - Concrete paper ground, charcoal ink bands, safety orange used as whole panels.
 - Chamfered plates plus a single 31° roof-pitch cut per large panel or photo.
-- Grayscale photography throughout, except rental equipment, which is shown alone and in colour. SAS orange is the only other saturated colour on the page.
+- Grayscale photography throughout, except rental equipment and the project photo viewer, which show one subject alone and in colour. SAS orange is the only other saturated colour on the page.
 - Chakra Petch uppercase for signage. Azeret Mono only for data.
 - Flat: no radius, no shadows. Depth comes from tone steps, overlap and the cut.
 - Honest placeholders: Sample tags on stock photos and unconfirmed listings.
@@ -373,7 +373,8 @@ Buttons are plates that label an action: tactile and blunt.
 ### Cards / Containers
 - **Plates:** the base container, a chamfered block on a tone (dark, orange, worn paper or concrete) with generous padding (about 1.1–2.25rem). No border, no shadow.
 - **Service plate:** a tall plate-charcoal block with the 18px blueprint grid. It has an uppercase title top-left and a centred service glyph that lifts 6px on hover. A separate caption plate hangs below it at a small seam, in mono steel-on-dark. The first plate of the set is orange, with an ink-tinted grid and rust caption.
-- **Project card:** an ink card with a 4:3 grayscale photo. Tags sit top-left, a paper title plate with a slanted right edge sits bottom-left (uppercase title plus mono location in steel), and a 2.5rem orange square "+" action sits bottom-right. On hover the photo regains a trace of colour (grayscale 0.15) and zooms 3% over 900ms. The "+" action turns paper on hover.
+- **Project card:** an ink card with a 4:3 grayscale photo. Tags sit top-left, a paper title plate with a slanted right edge sits bottom-left (uppercase title plus mono location in steel), and a 2.5rem orange square "+" action sits bottom-right. On hover the photo regains a trace of colour (grayscale 0.15) and zooms 3% over 900ms. The "+" action turns paper on hover. Cards for real SAS jobs add a mono "n photos" tag, and the whole card opens the project photo viewer.
+- **Project photo viewer:** a full-screen ink dialog that opens with the menu's roof-pitch wipe. Uppercase title and mono location top-left, a paper Close button top-right. Photos sit one per slide on a scroll-snap track (swipe, arrow keys or square paper arrow buttons), in full colour with object-fit contain. Below: the alt text as caption, a mono "01 / 05" counter, and a mono line with any design credit and a paper link to the source Facebook post.
 - **Equipment card:** plate charcoal with two opposite chamfers, a 4:3 colour photo of the machine alone with tags (and a licence credit bottom-right when the source needs one), an uppercase name, a mono spec list on dark hairlines, and a small orange "Ask availability" button. On hover the photo zooms 4%.
 - **Spec list:** mono `dl` rows between hairlines. The label (`dt`) is in secondary steel and the value is right-aligned. Rates always read "Quoted per job".
 
@@ -421,7 +422,7 @@ The closing band is a grayscale site photo under an ink scrim, with a hairline a
 ### Named Rules
 **The Visible Sample Rule.** Stock photography and unconfirmed entries (projects, equipment) carry an ink Sample tag with orange text, driven by the content's `sample` flag. The tag stays until real SAS content replaces the entry. It is never hidden to make a layout look finished.
 
-**The Grayscale Site Rule.** Every photograph gets the same grayscale treatment, so SAS orange is the only saturated colour on the page. The one exception is rental equipment, shown alone and in colour so renters see the actual machine.
+**The Grayscale Site Rule.** Every photograph gets the same grayscale treatment, so SAS orange is the only saturated colour on the page. The exceptions are rental equipment, shown alone and in colour so renters see the actual machine, and the project photo viewer, which shows one SAS photo at a time in colour so clients see the real finishes. Project cards and page heroes stay grayscale.
 
 **The Cut Reveal Rule.** Things enter by being uncovered along a cut: a clip or mask reveal with a short travel of 0.35em (lines) or 0.75rem (blocks) at most. Plates are cut open at the roof pitch. Nothing flies in from a distance or bounces.
 
@@ -432,7 +433,7 @@ The closing band is a grayscale site photo under an ink scrim, with a hairline a
 - **Do** chamfer plates at 14px, large plates at 22px, and buttons at small two-corner cuts; keep every box's radius at 0.
 - **Do** use orange as a whole field (panel, plate, button, tile block) with ink (7.0:1) or rust (4.8:1) text on it.
 - **Do** make only the first plate orange in a sequence of plates; the rest are ink or worn paper.
-- **Do** run every photo through the shared grayscale treatment, except equipment shots (`color: true`), which show the machine alone and in colour.
+- **Do** run every photo through the shared grayscale treatment, except equipment shots (`color: true`) and the project photo viewer, which show one subject alone and in colour.
 - **Do** set signage in uppercase Chakra Petch and data (addresses, hours, specs, counters, job numbers, tags) in Azeret Mono.
 - **Do** join plates and cards at 8px seams, and split desktop columns on a 1px hairline spine.
 - **Do** end every page at a phone number: the closing band, footer and menu carry call actions at full button height (3rem or more), and a compact header call joins them from 40rem up.
